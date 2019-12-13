@@ -6,7 +6,7 @@ public class Data {
     public static String LOGIN="/login";
     public static String REGISTER_USER="/user";
     //
-    public static String REGISTER_HOME = "/home";
+    public static String REGISTER_HOME = "/homes";
     public static String UPLOAD_HOME="/home";
     //
     public static String REGISTER_ZONE="/zone";

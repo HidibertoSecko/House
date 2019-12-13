@@ -15,19 +15,19 @@
             android:orientation="vertical" >
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/photo"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 app:srcCompat="@android:drawable/btn_dialog" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/precios"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:text="TextView" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/descripciones"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:text="TextView" />
@@ -38,14 +38,14 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/ciudad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="TextView" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/region"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -58,34 +58,14 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/zona"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="TextView" />
 
                 <TextView
-                    android:id="@+id/textView9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="TextView" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="TextView" />
-
-                <TextView
-                    android:id="@+id/textView11"
+                    android:id="@+id/baños"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -98,14 +78,14 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textView13"
+                    android:id="@+id/cuartos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="TextView" />
 
                 <TextView
-                    android:id="@+id/textView12"
+                    android:id="@+id/living_area"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -118,14 +98,34 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textView15"
+                    android:id="@+id/lot_area"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="TextView" />
 
                 <TextView
-                    android:id="@+id/textView14"
+                    android:id="@+id/piscina"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/garaje"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/año"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -133,7 +133,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/servicios"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:text="TextView" />

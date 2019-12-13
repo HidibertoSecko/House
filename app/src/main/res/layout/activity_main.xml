@@ -27,8 +27,9 @@
             android:layout_weight="1"
             android:background="#108797"
 
-            android:textColor="#B3F1B3"
-            android:text="Button" />
+            android:onClick="registrarhouse"
+            android:text="registrar house"
+            android:textColor="#B3F1B3" />
 
         <Button
             android:id="@+id/button6"

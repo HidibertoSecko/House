@@ -30,8 +30,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void descripcionhome(View view){
-        Intent descripcion = new Intent(this, DescripcionHome.class);
+        Intent descripcion = new Intent(this, des_home.class);
         startActivity(descripcion);
+    }
+
+    public void registrarhouse(View view){
+        Intent register = new Intent(this, RegisterHome.class);
+        startActivity(register);
     }
 
     private void loadComponents() {

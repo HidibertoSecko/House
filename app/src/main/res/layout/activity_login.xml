@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#81719E"
     tools:context=".Login">
 
     <EditText
@@ -17,6 +18,7 @@
         android:ems="10"
         android:hint="email"
         android:inputType="textWebEmailAddress"
+        android:textColorHint="#FFEB3B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,34 +34,33 @@
         android:ems="10"
         android:hint="password"
         android:inputType="textPassword"
+        android:textColorHint="#FFEB3B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailCl" />
 
     <Button
         android:id="@+id/btn_login"
-        android:layout_width="139dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="142dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
-        android:layout_marginEnd="141dp"
-        android:background="#4D4DF1"
+        android:background="#2E2E6D"
         android:onClick="princi"
         android:text="Iniciar Sesion"
+        android:textColor="#FFEB3B"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordCl" />
 
     <Button
         android:id="@+id/btn_registerNewUser"
-        android:layout_width="215dp"
-        android:layout_height="29dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:layout_marginEnd="8dp"
-        android:background="#F3F2F5"
+        android:background="#2E2E6D"
         android:onClick="Registrar"
         android:text="Registrarse"
+        android:textColor="#FFEB3B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +79,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/home" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
