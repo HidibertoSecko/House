@@ -12,12 +12,13 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/precio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Titulo de Prueba"
-            android:textSize="20dp"
             android:textColor="#ff0000"
-            android:id="@+id/precio"/>
+            android:textSize="20dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,4 +26,15 @@
             android:id="@+id/description"
             android:layout_below="@+id/precio"/>
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/ver_descripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="#108797"
+        android:onClick="descripcionhome"
+        android:text="ver"
+        android:textColor="#B3F1B3"
+        android:textColorLink="#00D33636" />
 </LinearLayout>

@@ -4,6 +4,7 @@ public class Item {
         public String title;
         public String description​;
         public String url;
+
         public int id;
         public void setTitle​(String title){
             this.title = title;

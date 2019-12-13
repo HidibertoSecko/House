@@ -29,6 +29,11 @@ public class MainActivity extends AppCompatActivity {
         loadComponents();
     }
 
+    public void descripcionhome(View view){
+        Intent descripcion = new Intent(this, DescripcionHome.class);
+        startActivity(descripcion);
+    }
+
     private void loadComponents() {
         AsyncHttpClient client = new AsyncHttpClient();
         RequestParams params = new RequestParams();
@@ -36,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         final ArrayList<Item> list_data = new ArrayList<Item>();
         client.get("http://192.168.100.138:8000/api/v1.0/homes", params, new JsonHttpResponseHandler(){
             public void onSuccess(int statusCode, Header[] headers, JSONArray response){
-                Toast.makeText(MainActivity.this, "PUFF", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(MainActivity.this, "", Toast.LENGTH_SHORT).show();
                 try {
                     //JSONArray data = response.getJSONArray("data");
                     for(int i=0;i<response.length();i++){
