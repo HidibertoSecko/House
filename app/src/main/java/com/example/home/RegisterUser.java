@@ -63,13 +63,13 @@ public class RegisterUser extends AppCompatActivity {
         else{
             AsyncHttpClient user=new AsyncHttpClient();
             RequestParams params=new RequestParams();
-            params.add("usernamne", firstName.getText().toString());
+            params.add("address",address.getText().toString());
             params.add("apellidos",lastName.getText().toString());
             params.add("ci",ci.getText().toString());
             params.add("password",password.getText().toString());
             params.add("email",email.getText().toString());
             params.add("sexo",sexo.getText().toString());
-            params.add("address",address.getText().toString());
+            params.add("username", firstName.getText().toString());
             params.add("phone",phone.getText().toString());
 
             final String emailuser=password.getText().toString();
@@ -124,4 +124,5 @@ public class RegisterUser extends AppCompatActivity {
     public void login(View view){
         Intent login= new Intent(this, Login.class);
         startActivity(login);}
+
 }
