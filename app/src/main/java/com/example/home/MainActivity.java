@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.home.utils.Data;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         RequestParams params = new RequestParams();
         final ListView list = (ListView)this.findViewById(R.id.list_main);
         final ArrayList<Item> list_data = new ArrayList<Item>();
-        client.get("http://192.168.100.138:8000/api/v1.0/homes", params, new JsonHttpResponseHandler(){
+        client.get(Data.HOST+Data.REGISTER_HOME, params, new JsonHttpResponseHandler(){
             public void onSuccess(int statusCode, Header[] headers, JSONArray response){
                // Toast.makeText(MainActivity.this, "", Toast.LENGTH_SHORT).show();
                 try {
