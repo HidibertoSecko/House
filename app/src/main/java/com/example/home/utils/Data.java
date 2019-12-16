@@ -9,8 +9,8 @@ public class Data {
     public static String REGISTER_HOME = "/homes";
     public static String UPLOAD_HOME="/home";
     //
-    public static String REGISTER_ZONE="/zone";
-    public static String UP_IMAGE_MENU="/zone";
+    public static String REGISTER_ZONE="/neighborhood";
+    public static String UP_IMAGE_MENU="/neighborhood";
     //
     public static String ID_USER=null;
     public static String ID_HOME=null;

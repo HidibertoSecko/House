@@ -71,7 +71,7 @@ public class Login extends AppCompatActivity {
      });
     }
     public void princi(View view){
-        Intent main= new Intent(this, MainActivity.class);
+        Intent main= new Intent(this, roles.class);
         startActivity(main);}
     public void Registrar(View view){
         Intent login= new Intent(this, RegisterUser.class);

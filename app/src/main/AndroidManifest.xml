@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".des_home"></activity>
+        <activity android:name=".MostrarCasa"></activity>
+        <activity android:name=".Registrar_zonas" />
+        <activity android:name=".agente" />
+        <activity android:name=".roles" />
+        <activity android:name=".des_home" />
         <activity android:name=".RegisterHome" />
         <activity android:name=".Login">
             <intent-filter>
