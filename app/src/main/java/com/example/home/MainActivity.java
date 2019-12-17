@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
-import android.widget.Toast;
+
 
 import com.example.home.utils.Data;
 import com.loopj.android.http.AsyncHttpClient;
@@ -33,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
     public void descripcionhome(View view){
         Intent descripcion = new Intent(this, des_home.class);
         startActivity(descripcion);
+    }
+    public void ubicacion(View view){
+        Intent ubicacion = new Intent(this,ubicacion.class);
+        startActivity(ubicacion);
     }
 
     public void registrarhouse(View view){
@@ -70,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
     }
 }
 

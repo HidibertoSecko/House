@@ -17,6 +17,7 @@ public class item_home {
     public String año_construccion;
 
     public int id;
+
     public void setCity​(String city){
         this.city = city;
     }
@@ -27,9 +28,7 @@ public class item_home {
     public void setPrecio(String precio){
         this.precio = precio;
     }
-    public void setDescription​(String description​){
-        this.description​ = description​;
-    }
+    public void setDescription​(String description​){ this.description​ = description​;}
     public void setBaños(String baños){ this.baños = baños; }
     public void setCuartos(String cuartos){
         this.cuartos = cuartos;
@@ -49,12 +48,10 @@ public class item_home {
     public void setServicios_basicos​(String servicios_basicos){ this.servicios_basicos = servicios_basicos; }
     public void setGaraje​(String garaje){ this.garaje = garaje; }
     public void setAño_construccion​(String año_construccion){ this.año_construccion = año_construccion; }
-
-
-
     public void setId​(int id​){
         this.id = id;
     }
+
     public int getId​(){
         return this.id;
     }

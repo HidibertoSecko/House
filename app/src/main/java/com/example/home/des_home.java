@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
+import com.example.home.utils.Data;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -28,26 +29,38 @@ public class des_home extends AppCompatActivity {
     }
 
     private void loadDescripcion() {
-        AsyncHttpClient client = new AsyncHttpClient();
-        RequestParams params = new RequestParams();
-        final ListView des = (ListView)this.findViewById(R.id.list_descripcion);
-        final ArrayList<Item> list_des = new ArrayList<Item>();
-        client.get("http://192.168.100.138:8000/api/v1.0/homes?id=5df309b7307139007810952b", params, new JsonHttpResponseHandler(){
+        AsyncHttpClient house = new AsyncHttpClient();
+        RequestParams datos = new RequestParams();
+        final ListView lista = (ListView)this.findViewById(R.id.list_descripcion);
+        final ArrayList<item_home> list_des = new ArrayList<item_home>();
+        house.get(Data.HOST+Data.REGISTER_HOME, datos, new JsonHttpResponseHandler(){
             public void onSuccess(int statusCode, Header[] headers, JSONArray response){
                 // Toast.makeText(MainActivity.this, "", Toast.LENGTH_SHORT).show();
                 try {
                     //JSONArray data = response.getJSONArray("data");
                     for(int i=0;i<response.length();i++){
-                        Item p = new Item();
+                        item_home casa = new item_home();
                         JSONObject obj = response.getJSONObject(i);
                         //Toast.makeText(MainActivity.this,""+response.length(),Toast.LENGTH_SHORT).show();
-                        p.id = i;
-                        p.title = obj.getString("precio");
-                        p.description​ = obj.getString("property_descryption");
-                        p.url = obj.getString("photo");
-                        list_des.add(p);
+                        casa.id = i;
+                        casa.city= obj.getString("city");
+                        casa.region = obj.getString("region");
+                        casa.zona = obj.getString("zone");
+                        casa.precio = obj.getString("precio");
+                        casa.description​ = obj.getString("property_descryption");
+                        casa.baños = obj.getString("bedrooms");
+                        casa.cuartos = obj.getString("badrooms");
+                        casa.living_area = obj.getString("living_area");
+                        casa.lot_area = obj.getString("lot_area");
+                        casa.piscina = obj.getString("piscina");
+                        casa.photo = obj.getString("photo");
+                        casa.servicios_basicos = obj.getString("servicios");
+                        casa.garaje = obj.getString("garaje");
+                        casa.año_construccion = obj.getString("año_construccion");
+                        list_des.add(casa);
                     }
-                    DescripcionHome descrip= new DescripcionHome(des_home.this, list_des);
+                    DescripcionHome descrip = new DescripcionHome(des_home.this, list_des);
+                    lista.setAdapter(descrip);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

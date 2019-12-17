@@ -4,39 +4,44 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
-import java.util.List;
 
-class DescripcionHome {
-    private Context context;
-    private List<Item> items;
+class DescripcionHome extends BaseAdapter {
+    private Context contex;
+    private ArrayList<item_home> item;
 
-    public DescripcionHome(Context context, ArrayList<Item> items){
-        this.context = context;
-        this.items = items;
+    public DescripcionHome(Context context, ArrayList<item_home> item){
+        this.contex= context;
+        this.item = item;
     }
 
+
+    @Override
     public int getCount() {
-        return this.items.size();
+        return this.item.size();
     }
 
+    @Override
     public Object getItem(int i) {
-        return this.items.get(i);
+        return this.item.get(i);
     }
 
+    @Override
     public long getItemId(int i) {
-        return this.items.get(i).getId​();
+        return this.item.get(i).getId​();
     }
 
+    @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         if(view == null){
             LayoutInflater inflate = (LayoutInflater)
-                    this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                    this.contex.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflate.inflate(R.layout.descripcion_home, null);
         }
         TextView precio = (TextView)view.findViewById(R.id.precios);
@@ -53,19 +58,19 @@ class DescripcionHome {
         TextView garaje = (TextView)view.findViewById(R.id.garaje);
         TextView año = (TextView)view.findViewById(R.id.año);
 
-        Glide.with(context).load(items.get(i).getUrl()).centerCrop().into(photo);
-        precio.setText(this.items.get(i).getTitle());
-        descripciones.setText(this.items.get(i).getDescription​());
-        region.setText(this.items.get(i).getDescription​());
-        zona.setText(this.items.get(i).getDescription​());
-        baños.setText(this.items.get(i).getDescription​());
-        cuartos.setText(this.items.get(i).getDescription​());
-        living_area.setText(this.items.get(i).getDescription​());
-        lot_area.setText(this.items.get(i).getDescription​());
-        garaje.setText(this.items.get(i).getDescription​());
-        año.setText(this.items.get(i).getDescription​());
-
-
+        Glide.with(contex).load(item.get(i).getPhoto()).centerCrop().into(photo);
+        precio.setText(this.item.get(i).getPrecio());
+        descripciones.setText(this.item.get(i).getDescription​());
+        ciudad.setText(this.item.get(i).getCity());
+        region.setText(this.item.get(i).getRegion());
+        zona.setText(this.item.get(i).getZona());
+        baños.setText(this.item.get(i).getBaños());
+        cuartos.setText(this.item.get(i).getCuartos());
+        living_area.setText(this.item.get(i).getLiving_area());
+        lot_area.setText(this.item.get(i).getLot_area());
+        servicios.setText(this.item.get(i).getServicios_basicos());
+        garaje.setText(this.item.get(i).getGaraje());
+        año.setText(this.item.get(i).getAño_construccion());
 
         return view;
     }

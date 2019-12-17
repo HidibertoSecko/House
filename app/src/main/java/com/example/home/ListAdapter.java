@@ -48,6 +48,8 @@ public class ListAdapter extends BaseAdapter {
         TextView titulo = (TextView)view.findViewById(R.id.precio);
         TextView description = (TextView)view.findViewById(R.id.description);
         ImageView image = (ImageView)view.findViewById(R.id.imagesource);
+
+
         Glide.with(context).load(items.get(i).getUrl()).centerCrop().into(image);
         titulo.setText(this.items.get(i).getTitle());
         description.setText(this.items.get(i).getDescription​());

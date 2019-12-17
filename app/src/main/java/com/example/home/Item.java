@@ -6,6 +6,7 @@ public class Item {
         public String url;
 
         public int id;
+
         public void setTitle​(String title){
             this.title = title;
         }
@@ -18,6 +19,7 @@ public class Item {
         public void setId​(int id​){
             this.id = id;
         }
+
         public int getId​(){
             return this.id;
         }
