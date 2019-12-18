@@ -42,7 +42,7 @@ class DescripcionHome extends BaseAdapter {
         if(view == null){
             LayoutInflater inflate = (LayoutInflater)
                     this.contex.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflate.inflate(R.layout.descripcion_home, null);
+            view = inflate.inflate(R.layout.descripcion_home,null);
         }
         TextView precio = (TextView)view.findViewById(R.id.precios);
         TextView descripciones = (TextView)view.findViewById(R.id.descripciones);
