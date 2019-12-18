@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CursorAdapter;
 import android.widget.ListView;
 
 
@@ -50,18 +51,42 @@ public class MainActivity extends AppCompatActivity {
         final ListView list = (ListView)this.findViewById(R.id.list_main);
         final ArrayList<Item> list_data = new ArrayList<Item>();
         client.get(Data.HOST+Data.REGISTER_HOME, params, new JsonHttpResponseHandler(){
+
+         @Override
+         public void onSuccess(int statusCode, Header[] headers, JSONObject response){
+             try {
+                JSONArray list = (JSONArray) response.get("Search");
+                for(int i=0; i < list.length(); i++){
+                    JSONObject itemJson = list.getJSONObject(i);
+                    String photo = itemJson.getString("photo");
+                    String precio = itemJson.getString("precio");
+                    String property_descrytion = itemJson.getString("property_descryption");
+                    String zone = itemJson.getString("zone");
+
+                    Item item =new Item(photo, precio,  property_descrytion, zone);
+                    list_data.add(item);
+                }
+                 ListAdapter adapter = new ListAdapter(MainActivity.this, list_data);
+
+             } catch (JSONException e) {
+                 e.printStackTrace();
+             }
+
+         }
+
             public void onSuccess(int statusCode, Header[] headers, JSONArray response){
                // Toast.makeText(MainActivity.this, "", Toast.LENGTH_SHORT).show();
                 try {
                     //JSONArray data = response.getJSONArray("data");
                     for(int i=0;i<response.length();i++){
-                        Item p = new Item();
+                        Item p = new Item(i);
                         JSONObject obj = response.getJSONObject(i);
                         //Toast.makeText(MainActivity.this,""+response.length(),Toast.LENGTH_SHORT).show();
                         p.id = i;
-                        p.title = obj.getString("precio");
-                        p.description​ = obj.getString("property_descryption");
-                        p.url = obj.getString("photo");
+                        p.photo = obj.getString("photo");
+                        p.property_descrytion​ = obj.getString("property_descryption");
+                        p.precio = obj.getString("precio");
+                        p.zone = obj.getString("zone");
                         list_data.add(p);
                     }
                     ListAdapter adapter = new ListAdapter(MainActivity.this, list_data);
