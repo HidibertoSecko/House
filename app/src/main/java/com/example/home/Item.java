@@ -1,36 +1,52 @@
 package com.example.home;
 
 public class Item {
-        public String title;
-        public String description​;
-        public String url;
-
+        public String photo;
+        public String precio;
+        public String property_descrytion​;
+        public String zone;
         public int id;
 
-        public void setTitle​(String title){
-            this.title = title;
+    public Item(String photo, String property_descrytion, String precio, String zone) {
+        this.photo = photo;
+        this.property_descrytion​ = property_descrytion;
+        this.precio = precio;
+        this.zone = zone;
+    }
+
+    public Item(int i) {
+    }
+    public void setPhoto​(String photo){
+            this.photo = photo;
         }
-        public void setDescription​(String description​){
-            this.description​ = description​;
+        public void setProperty_descrytion​(String property_descrytion​​){
+            this.property_descrytion​ = property_descrytion​;
         }
-        public void setUrl​(String url){
-            this.url = url;
+        public void setPrecio​(String precio){
+            this.precio = precio;
         }
+        public void setZone​(String zone){
+        this.zone = zone;
+    }
         public void setId​(int id​){
             this.id = id;
         }
 
+
         public int getId​(){
             return this.id;
         }
-        public String getTitle(){
-            return  this.title;
+        public String getPhoto(){
+            return  this.photo;
         }
-        public String getDescription​(){
-            return this.description​;
+        public String getProperty_descrytion​​(){
+            return this.property_descrytion​;
         }
-        public String getUrl(){
-            return this.url;
+        public String getPrecio(){
+            return this.precio;
         }
-    }
 
+        public String getZone(){
+        return this.zone;
+    }
+}

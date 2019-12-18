@@ -25,6 +25,13 @@
             android:text="hola amigos"
             android:id="@+id/description"
             android:layout_below="@+id/precio"/>
+
+        <TextView
+            android:id="@+id/zona"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_below="@+id/description"/>
     </RelativeLayout>
 
     <LinearLayout
