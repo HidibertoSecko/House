@@ -49,18 +49,71 @@ public class ubicacion extends FragmentActivity implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
+        LatLng potosi = new LatLng(-19.573700, -65.772360);
+
+        mMap.addMarker(new MarkerOptions().position(potosi).title("Villa Copacabana").draggable(true));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(
+                new LatLng(-19.5524335, -65.7647969),
+                10f
+                )
+        );
+        mMap.addPolyline(
+                new PolylineOptions()
+                        .add(new LatLng(-19.568626, -65.772102))
+                        .add(new LatLng(-19.570203, -65.775879))
+                        .add(new LatLng(-19.570930, -65.776029))
+                        .add(new LatLng(-19.570991, -65.775257))
+                        .add(new LatLng(-19.573579, -65.774377))
+                        .add(new LatLng(-19.573882, -65.775321))
+                        .add(new LatLng(-19.578916, -65.773883))
+                        .add(new LatLng(-19.578876, -65.773562))
+
+                        .add(new LatLng(-19.577643, -65.769721))
+                        .add(new LatLng(-19.568626, -65.772102))
+                        .width(8f)
+                        .color(Color.RED)
+        );
+
+        mMap.addPolyline(
+                new PolylineOptions()
+                        .add(new LatLng(-19.560710, -65.767264))
+                        .add(new LatLng(-19.575954, -65.762671))
+                        .add(new LatLng(-19.575550, -65.763487))
+                        .add(new LatLng(-19.577491, -65.766062))
+                        .add(new LatLng(-19.577936, -65.768079))
+                        .add(new LatLng(-19.577451, -65.769753))
+                        .add(new LatLng(-19.573690, -65.770053))
+                        .add(new LatLng(-19.571668, -65.770568))
+                        .add(new LatLng(-19.568798, -65.771899))
+                        .add(new LatLng(-19.565846, -65.771899))
+                        .add(new LatLng(-19.563460, -65.772199))
+                        .add(new LatLng(-19.561438, -65.773701))
+                        .add(new LatLng(-19.560710, -65.767264))
+                        .width(8f)
+                        .color(Color.BLUE)
+        );
         // Add a marker in Sydney and move the camera
-        LatLng potosi = new LatLng(-19.5582635, -65.7638169);
+
+
         mMap.addMarker(new MarkerOptions().position(potosi).title("Zona Lecherias").draggable(true));
+
         CameraPosition camarePosicion = new CameraPosition.Builder()
                 .target(potosi)
                 .zoom(16)
                 .bearing(0)
                 .tilt(45)
                 .build();
+
+        mMap.moveCamera(CameraUpdateFactory.newCameraPosition( camarePosicion));
+
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+        mMap.getUiSettings().setCompassEnabled(true);
+        mMap.getUiSettings().setMapToolbarEnabled(true);
+
         mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             @Override
             public void onMapClick(LatLng latLng) {
+
                 Toast.makeText(ubicacion.this, "Coordenadas \n" +
                         "Lat:" + latLng.latitude + "\n"  +
                         "Log:" + latLng.longitude ,
@@ -68,22 +121,6 @@ public class ubicacion extends FragmentActivity implements OnMapReadyCallback {
             }
         });
 
-        mMap.setOnMarkerDragListener(new GoogleMap.OnMarkerDragListener() {
-            @Override
-            public void onMarkerDragStart(Marker marker) {
-
-            }
-
-            @Override
-            public void onMarkerDrag(Marker marker) {
-
-            }
-
-            @Override
-            public void onMarkerDragEnd(Marker marker) {
-
-            }
-        });
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
@@ -92,8 +129,8 @@ public class ubicacion extends FragmentActivity implements OnMapReadyCallback {
             }
         });
 
-        LatLng potosiz = new LatLng(-19.5582335, -65.7646169);
-        mMap.addMarker(new MarkerOptions().position(potosiz).title("Zona Lecherias").draggable(true));
+        LatLng potosiz = new LatLng(-19.570931, -65.774055);
+        mMap.addMarker(new MarkerOptions().position(potosiz).title("Villa Copacabana").draggable(true));
         CameraPosition camarPosicion = new CameraPosition.Builder()
                 .target(potosiz)
                 .zoom(16)
