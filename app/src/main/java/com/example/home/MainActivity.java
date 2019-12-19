@@ -62,8 +62,9 @@ public class MainActivity extends AppCompatActivity {
                     String precio = itemJson.getString("precio");
                     String property_descrytion = itemJson.getString("property_descryption");
                     String zone = itemJson.getString("zone");
+                    String estado = itemJson.getString("region");
 
-                    Item item =new Item(photo, precio,  property_descrytion, zone);
+                    Item item =new Item(photo, precio,  property_descrytion, zone, estado);
                     list_data.add(item);
                 }
                  ListAdapter adapter = new ListAdapter(MainActivity.this, list_data);
@@ -87,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
                         p.property_descrytion​ = obj.getString("property_descryption");
                         p.precio = obj.getString("precio");
                         p.zone = obj.getString("zone");
+                        p.estado = obj.getString("region");
                         list_data.add(p);
                     }
                     ListAdapter adapter = new ListAdapter(MainActivity.this, list_data);

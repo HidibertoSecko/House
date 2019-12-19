@@ -5,13 +5,15 @@ public class Item {
         public String precio;
         public String property_descrytion​;
         public String zone;
+        public String estado;
         public int id;
 
-    public Item(String photo, String property_descrytion, String precio, String zone) {
+    public Item(String photo, String property_descrytion, String precio, String zone, String estado) {
         this.photo = photo;
         this.property_descrytion​ = property_descrytion;
         this.precio = precio;
         this.zone = zone;
+        this.estado = estado;
     }
 
     public Item(int i) {
@@ -27,6 +29,9 @@ public class Item {
         }
         public void setZone​(String zone){
         this.zone = zone;
+    }
+        public void setEstado(String estado){
+        this.estado = estado;
     }
         public void setId​(int id​){
             this.id = id;
@@ -48,5 +53,8 @@ public class Item {
 
         public String getZone(){
         return this.zone;
+    }
+        public String getEstado(){
+        return this.estado;
     }
 }
