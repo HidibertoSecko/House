@@ -92,6 +92,12 @@ public class ubicacion extends FragmentActivity implements OnMapReadyCallback {
                         .width(8f)
                         .color(Color.BLUE)
         );
+
+        mMap.addPolygon(
+          new PolygonOptions().add(new LatLng(-19.582047, -65.778120))
+                .strokeWidth(122)
+                .fillColor(Color.YELLOW)
+        );
         // Add a marker in Sydney and move the camera
 
 

@@ -2,7 +2,7 @@ package com.example.home.utils;
 
 public class Data {
     public static String TOKEN=null;
-    public static String HOST="http://192.168.100.138:8000/api/v1.0";
+    public static String HOST="http://192.168.154.137:8000/api/v1.0";
     public static String LOGIN="/login";
     public static String REGISTER_USER="/user";
     //
@@ -15,4 +15,3 @@ public class Data {
     public static String ID_USER=null;
     public static String ID_HOME=null;
 }
-

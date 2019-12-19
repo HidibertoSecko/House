@@ -1,30 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".roles">
+    android:orientation="vertical"
+    tools:context=".roles"
+    android:background="@drawable/madera"
+    >
 
-    <Button
-        android:id="@+id/roluser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:onClick="roluser"
-        android:text="Ussuario"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:srcCompat="@drawable/home"
+        android:layout_marginTop="50dp"/>
 
-    <Button
-        android:id="@+id/rolagente"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/usuarios"
+            tools:srcCompat="@android:drawable/ic_menu_myplaces" />
+
+        <Button
+            android:id="@+id/roluser"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:background="#A27575"
+            android:onClick="roluser"
+            android:text="Usuario"
+            android:textColor="#FBC02D"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
-        android:onClick="rolagente"
-        android:text="Agente"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/roluser" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/agente"
+            tools:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+        <Button
+            android:id="@+id/rolagente"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+
+            android:background="#A27575"
+            android:onClick="rolagente"
+            android:text="Agente"
+            android:textColor="#FBC02D"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/roluser" />
+    </LinearLayout>
+
+</LinearLayout>

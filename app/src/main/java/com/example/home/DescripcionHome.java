@@ -11,10 +11,11 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
+import java.util.List;
 
 class DescripcionHome extends BaseAdapter {
     private Context contex;
-    private ArrayList<item_home> item;
+    private List<item_home> item;
 
     public DescripcionHome(Context context, ArrayList<item_home> item){
         this.contex= context;

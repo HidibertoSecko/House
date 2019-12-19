@@ -23,6 +23,9 @@ import cz.msebera.android.httpclient.Header;
 public class RegisterHome extends AppCompatActivity {
     private Button register_house;
     private static Context Reg_house=null;
+
+    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
